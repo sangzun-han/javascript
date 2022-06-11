@@ -91,11 +91,11 @@
 
       // Array.prototype.sort()
       // 3. Sort the inventors by birthdate, oldest to youngest
-      console.log(
-        inventors.sort(function (a, b) {
-          return a.year - b.year;
-        })
-      );
+      const ordered = inventors.sort(function (a, b) {
+        return a.year - b.year;
+      });
+      console.table(ordered);
+
       // Array.prototype.reduce()
       // 4. How many years did all the inventors live all together?
       console.log(
@@ -105,7 +105,7 @@
       );
 
       // 5. Sort the inventors by years lived
-      console.log(
+      console.table(
         inventors.sort(function (a, b) {
           return a.passed - a.year > b.passed - b.year ? -1 : 1;
         })
@@ -123,7 +123,7 @@
 
       // 7. sort Exercise
       // Sort the people alphabetically by last name
-      console.log(
+      console.table(
         people.sort(function (last, next) {
           const [aLast, aFirst] = last.split(", ");
           const [bLast, bFirst] = next.split(", ");
