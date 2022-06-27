@@ -20,8 +20,7 @@
 
       fetch(endpoint)
         .then((res) => {
-          console.log(res);
-          return res.json(); // body text를 json으로 읽어 promise를 return
+          return res.json();
         })
         .then((data) => {
           cities.push(...data);
